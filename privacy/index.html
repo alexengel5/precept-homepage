@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Precept</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 680px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    a { color: #8ab4f8; }
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .updated { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .updated { color: #999; } }
+  a { color: #1a56db; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<p><a href="/">&larr; Precept</a></p>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: September 2026</p>
+
+<p>Precept is a collection of personal software projects built and operated by
+Alex Engel, for Alex Engel's own household use. Precept does not offer any
+product or service to the public, does not sell data, and does not use data
+for advertising.</p>
+
+<h2>Household Agent Suite</h2>
+
+<p>This project runs two narrowly-scoped automation agents, each authorized
+against a dedicated Google account created specifically for this household's
+agents (not Alex's or any family member's personal Google account):</p>
+
+<ul>
+  <li><strong>Scheduler agent</strong> &mdash; requests the
+    <code>https://www.googleapis.com/auth/calendar</code> scope on the
+    agent's own Google account. It reads and writes events on that
+    dedicated agent calendar only, and reads free/busy availability on
+    calendars that household members have explicitly shared with it (never
+    event details on shared calendars, only free/busy). It is used solely
+    to coordinate this household's scheduling.</li>
+  <li><strong>Mailroom agent</strong> &mdash; requests the
+    <code>https://www.googleapis.com/auth/gmail.modify</code> scope on the
+    same dedicated agent Google account. It reads messages in that agent
+    inbox and applies labels to them; it never sends, forwards, drafts, or
+    deletes mail, and never opens attachments. It is used solely to
+    triage and organize this household's email.</li>
+</ul>
+
+<p><strong>What is not accessed:</strong> neither agent has access to any
+personal Gmail or Calendar account belonging to Alex or any family member
+directly &mdash; only the separate, dedicated agent account, plus
+free/busy visibility that household members grant explicitly through their
+own Google Calendar sharing settings.</p>
+
+<p><strong>How data is stored:</strong> OAuth credentials are stored in the
+macOS Keychain and a per-agent-scoped secrets manager (Infisical), each
+agent's credentials isolated from every other agent's. Calendar and email
+content is processed to carry out the automation described above and is
+not transmitted to any third party, not stored outside this household's
+own systems, and not used for any purpose beyond what is described here.</p>
+
+<p><strong>Retention and revocation:</strong> Data is retained only as long
+as needed to operate these agents. Access can be revoked at any time by
+removing this app's access at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+on the agent's Google account.</p>
+
+<h2>Home Command Center</h2>
+
+<p>Home Command Center is a personal household management application. It
+does not currently request access to any Google account data.</p>
+
+<h2>Contact</h2>
+
+<p>Questions about any project under this domain:
+<a href="mailto:alex.engel@gmail.com">alex.engel@gmail.com</a></p>
+
+</body>
+</html>
