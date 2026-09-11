@@ -35,56 +35,36 @@
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: September 2026</p>
 
-<p>Precept is a collection of personal software projects built and operated by
-Alex Engel, for Alex Engel's own household use. Precept does not offer any
+<p>Precept is a collection of personal software projects, built and operated
+by Alex Engel for personal and household use. Precept does not offer any
 product or service to the public, does not sell data, and does not use data
 for advertising.</p>
 
-<h2>Household Agent Suite</h2>
+<h2>Google Account Data</h2>
 
-<p>This project runs two narrowly-scoped automation agents, each authorized
-against a dedicated Google account created specifically for this household's
-agents (not Alex's or any family member's personal Google account):</p>
+<p>Some projects under Precept request access to Google Account data, such
+as Calendar events or Tasks, in order to provide that project's features.
+The level of access requested varies by project and may include viewing
+data, syncing it into the app, or in some cases creating or updating it on
+behalf of the account that authorized access.</p>
 
 <ul>
-  <li><strong>Scheduler agent</strong> &mdash; requests the
-    <code>https://www.googleapis.com/auth/calendar</code> scope on the
-    agent's own Google account. It reads and writes events on that
-    dedicated agent calendar only, and reads free/busy availability on
-    calendars that household members have explicitly shared with it (never
-    event details on shared calendars, only free/busy). It is used solely
-    to coordinate this household's scheduling.</li>
-  <li><strong>Mailroom agent</strong> &mdash; requests the
-    <code>https://www.googleapis.com/auth/gmail.modify</code> scope on the
-    same dedicated agent Google account. It reads messages in that agent
-    inbox and applies labels to them; it never sends, forwards, drafts, or
-    deletes mail, and never opens attachments. It is used solely to
-    triage and organize this household's email.</li>
+  <li><strong>Household Agent Suite</strong> uses a dedicated Google
+    account, separate from any family member's personal account, to help
+    coordinate household scheduling and organize household email.</li>
+  <li><strong>Home Command Center</strong> views and syncs Google Calendar
+    and Tasks data to display it within the app.</li>
 </ul>
 
-<p><strong>What is not accessed:</strong> neither agent has access to any
-personal Gmail or Calendar account belonging to Alex or any family member
-directly &mdash; only the separate, dedicated agent account, plus
-free/busy visibility that household members grant explicitly through their
-own Google Calendar sharing settings.</p>
+<p>Any Google Account data accessed by a Precept project is used only to
+provide that project's stated functionality, is not shared with third
+parties, and is not used for any purpose beyond what is described here.</p>
 
-<p><strong>How data is stored:</strong> OAuth credentials are stored in the
-macOS Keychain and a per-agent-scoped secrets manager (Infisical), each
-agent's credentials isolated from every other agent's. Calendar and email
-content is processed to carry out the automation described above and is
-not transmitted to any third party, not stored outside this household's
-own systems, and not used for any purpose beyond what is described here.</p>
-
-<p><strong>Retention and revocation:</strong> Data is retained only as long
-as needed to operate these agents. Access can be revoked at any time by
-removing this app's access at
-<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
-on the agent's Google account.</p>
-
-<h2>Home Command Center</h2>
-
-<p>Home Command Center is a personal household management application. It
-does not currently request access to any Google account data.</p>
+<p><strong>Storage and retention:</strong> Access credentials and data are
+stored securely and retained only as long as needed to provide the
+relevant functionality. Access can be revoked at any time from
+<a href="https://myaccount.google.com/permissions">your Google Account's
+permissions page</a>.</p>
 
 <h2>Contact</h2>
 
